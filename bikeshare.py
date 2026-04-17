@@ -6,6 +6,10 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+MONTHS = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+DAYS = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday']
+
 
 def get_valid_input(prompt, valid_options):
     """Ask the user for input until it matches one of the valid options."""
@@ -34,16 +38,14 @@ def get_filters():
         list(CITY_DATA.keys())
     )
 
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     month = get_valid_input(
         'For what month? For all months type: "all". Enter a month and press enter:\n',
-        months
+        MONTHS
     )
 
-    days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     day = get_valid_input(
         'For what day? For all days type: "all". Enter a day and press enter:\n',
-        days
+        DAYS
     )
 
     print('-'*40)
@@ -66,15 +68,13 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.dayofweek
 
-    if month !='all':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
-        df = df[df['month']==month]
+    if month != 'all':
+        month = MONTHS.index(month)
+        df = df[df['month'] == month]
     
     if day != 'all':
-        days = ['Monday', 'Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday']
-        day = days.index(day.title())
-        df = df[df['day_of_week']==day]
+        day = WEEKDAYS.index(day.title())
+        df = df[df['day_of_week'] == day]
     print('Filered data:  \n',df)
     return df
 
@@ -102,14 +102,12 @@ def time_stats(df):
 
     # TO DO: display the most common month
     month_idx = df['month'].value_counts().idxmax()
-    months = ['january', 'february', 'march', 'april', 'may', 'june']
-    month = months[month_idx-1]
+    month = MONTHS[month_idx]
     print('The most common month: \n', month)
 
     # TO DO: display the most common day of week
     day_of_week = df['day_of_week'].value_counts().idxmax()
-    days = ['Monday', 'Tuesday', 'Wednesday','Thursday','Friday','Saturday','Sunday']
-    day = days[day_of_week]
+    day = WEEKDAYS[day_of_week]
     print('The most common day of week: \n', day)
 
     # TO DO: display the most common start hour
