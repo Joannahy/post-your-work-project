@@ -1,6 +1,10 @@
 import time
 import pandas as pd
 import numpy as np
+''' 
+Bikeshare Data Analysis Project. 
+run the program and follow the instructions to explore the data. You can filter the data by city, month and day of week. 
+'''
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
