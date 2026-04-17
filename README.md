@@ -13,7 +13,7 @@ To get started with this project, follow these steps:
 
 ## Requirements
 
-This project requires _Python 3_ and the _pandas_ library. You can install the dependencies using:
+This project requires **_Python 3_** and the **_pandas_** library. You can install the dependencies using:
 `pip install pandas`
 
 ## Date created
