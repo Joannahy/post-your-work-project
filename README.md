@@ -1,27 +1,20 @@
->**Note**: Please **fork** this Udacity repository so you have a **remote** repository in **your** GitHub account. Then you can clone the remote repository to your local machine. Later, as a part of the project, you will push your changes to the remote repository in your GitHub account.
+# Post Your Work Project
 
+This project demonstrates a solid understanding of Git and is the cherry on top of the course. All repository files are sourced from the **Bikeshare** project.
 
-# Project Title
+## How to Use This Project
 
-Describe what your project is about and what it does
+To get started with this project, follow these steps:
 
-## Information about how to use your project
+1. Clone the repository  `git clone https://github.com/Joannahy/post-your-work-project `
+2. Navigate to the project folder
+3. Execute the main file using Python: python `bikeshare.py`
+4. Follow the prompts: The terminal will guide you through filtering the data by city, month, and day.
 
-This could include:
+## Requirements
 
-- Step-by-step instructions for installing or setting up your project.
-- Any software dependencies that need to be installed.
-- Instructions and examples for how to use your project, including any helpful code snippets.
-- Common issues and troubleshooting tips
-
-## Contribution guidelines
-
-If you welcome contributions, provide guidelines on how others can contribute to your project.
-
-## Credits
-
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project requires _Python 3_ and the _pandas_ library. You can install the dependencies using:
+`pip install pandas`
 
 ## Date created
-
-Include the date you created this project and README file.
+created on: 20.04.2026
